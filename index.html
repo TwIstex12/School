@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Презентація про Колумба</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Слайди -->
+  <div class="slide active">
+    <h1>Христофор Колумб</h1>
+    <p>Мореплавець та дослідник, який відкрив Америку у 1492 році.</p>
+        <p>Який зробив 4 подорожі через Атлантичний океан.</p>
+        <h2>Автори презентації: Ільчук Марк та Красовський Василь.</h2>
+  </div>
+
+  <div class="slide">
+    <h2>Ранні роки</h2>
+    <p>Народився у Генуї (Італія) близько 1451 року. З дитинства захоплювався морем.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Перша подорож</h2>
+    <p>У 1492 році Колумб вирушив у плавання на трьох кораблях: "Нінья", "Пінта" і "Санта-Марія".</p>
+  </div>
+
+  <div class="slide">
+    <h2>Відкриття Америки</h2>
+    <p>12 жовтня 1492 року експедиція досягла островів Багамського архіпелагу.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Спадщина</h2>
+    <p>Колумб здійснив 4 подорожі через Атлантику. Його відкриття змінили хід світової історії.</p>
+  </div>
+
+  <!-- Кнопки -->
+  <div class="controls">
+    <button onclick="prevSlide()">◀ Назад</button>
+    <button onclick="nextSlide()">Вперед ▶</button>
+  </div>
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  </script>
+</body>
+</html>
