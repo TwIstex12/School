@@ -1,75 +1,91 @@
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f8fb;
-  color: #222;
-  line-height: 1.6;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background: linear-gradient(90deg, #4a90e2, #6ec1e4);
+body {
+  font-family: "Poppins", sans-serif;
   color: white;
+  overflow: hidden;
+}
+
+.presentation {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 2rem 1rem;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  padding: 2rem;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
-nav {
-  background: #2c3e50;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav a {
-  display: block;
-  padding: 1rem 1.5rem;
-  color: white;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-nav a:hover {
-  background: #34495e;
-}
-
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
 h2 {
-  color: #2c3e50;
-  border-bottom: 3px solid #6ec1e4;
-  padding-bottom: 0.4rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-footer {
-  background: #2c3e50;
-  color: #ccc;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+ul {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+button {
+  margin: 1.5rem 0.5rem 0 0.5rem;
+  padding: 0.8rem 2rem;
+  background: rgba(255,255,255,0.3);
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: white;
+  color: #0077ff;
 }
