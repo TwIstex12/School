@@ -1,31 +1,26 @@
-const slides = document.querySelectorAll(".slide");
-let current = 0;
+let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    if (i === index) {
-      slide.classList.add("active");
-      // змінюємо фон
-      const bg = slide.getAttribute("data-bg");
-      slide.style.backgroundImage = `url(${bg})`;
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
     }
-  });
-}
 
-// Початковий фон
-showSlide(current);
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
 
-document.querySelectorAll(".next").forEach(btn => {
-  btn.addEventListener("click", () => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  });
-});
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
 
-document.querySelectorAll(".prev").forEach(btn => {
-  btn.addEventListener("click", () => {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  });
-});
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
