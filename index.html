@@ -8,7 +8,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
       color: #fff;
       overflow: hidden;
@@ -17,174 +17,134 @@
       display: flex;
       width: 100vw;
       height: 100vh;
-      transition: transform 0.6s ease;
+      transition: transform 0.5s ease;
     }
     .slide {
       min-width: 100vw;
       height: 100vh;
-      padding: 60px;
+      padding: 50px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
     }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-    p, li {
-      font-size: 22px;
-      max-width: 900px;
-      line-height: 1.5;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: "⚡ ";
-    }
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 16px;
-      opacity: 0.8;
+    h1 { font-size: 46px; margin-bottom: 15px; }
+    h2 { font-size: 34px; margin-bottom: 15px; }
+    p, li { font-size: 22px; max-width: 900px; }
+    ul { list-style: none; padding: 0; }
+    ul li::before { content: "⚡ "; }
+    img {
+      max-width: 70%;
+      margin: 20px 0;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.4);
     }
     .controls {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 25px;
+      right: 25px;
       display: flex;
       gap: 10px;
     }
     button {
-      background: #00c6ff;
-      background: linear-gradient(45deg, #00c6ff, #0072ff);
-      border: none;
       padding: 12px 18px;
       font-size: 16px;
-      color: #fff;
+      border: none;
       border-radius: 8px;
       cursor: pointer;
+      background: #0072ff;
+      color: #fff;
     }
-    button:hover {
-      opacity: 0.85;
+    button:hover { opacity: .85; }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 16px;
+      opacity: .8;
     }
   </style>
 </head>
 <body>
-  <div class="slides" id="slides">
-    <!-- Слайд 1 -->
-    <section class="slide">
-      <h1>Альтернативна енергетика</h1>
-      <p>Шкільна презентація з Фізики</p>
-      <div class="footer">Підготував: Марк Ільчук, 8-В клас</div>
-    </section>
 
-    <!-- Слайд 2 -->
-    <section class="slide">
-      <h2>Що таке альтернативна енергетика?</h2>
-      <p>
-        Альтернативна енергетика — це отримання енергії з відновлюваних джерел,
-        які не вичерпуються та майже не шкодять довкіллю.
-      </p>
-    </section>
+<div class="slides" id="slides">
 
-    <!-- Слайд 3 -->
-    <section class="slide">
-      <h2>Основні джерела</h2>
-      <ul>
-        <li>Сонячна енергія</li>
-        <li>Вітрова енергія</li>
-        <li>Водна енергія</li>
-        <li>Геотермальна енергія</li>
-        <li>Біоенергія</li>
-      </ul>
-    </section>
+  <section class="slide">
+    <h1>Альтернативна енергетика</h1>
+    <p>Презентація з фізики</p>
+    <div class="footer">Підготував: Марк Ільчук, 8-В клас</div>
+  </section>
 
-    <!-- Слайд 4 -->
-    <section class="slide">
-      <section class="slide">
-      <h2>Сонячна енергія</h2>
-      <img src="img/solar-panel-reviews.jpg" alt="Сонячна енергетика" style="max-width:70%; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,.4); margin:19px 0;" />
-      <p>
-        Сонячні панелі перетворюють світло Сонця на електроенергію.
-        Це екологічно чистий та безшумний спосіб отримання енергії.
-      </p>
-    </section>
+  <section class="slide">
+    <h2>Що таке альтернативна енергетика?</h2>
+    <p>Альтернативна енергетика — це отримання енергії з відновлюваних джерел, які не вичерпуються та майже не шкодять довкіллю.</p>
+  </section>
 
-    <!-- Слайд 5 -->
-    <section class="slide">
-      <section class="slide">
-      <h2>Вітрова енергія</h2>
-      <img src="img/Sunset_at_Royd_Moor_Wind_Farm.jpg" alt="Вітрова енергетика" style="max-width:70%; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,.4); margin:19px 0;" />
-      <p>
-        Вітрові електростанції використовують силу вітру для обертання турбін
-        та виробництва електроенергії. Тема вивчається у курсі фізики.
-      </p>
-    </section>
+  <section class="slide">
+    <h2>Основні джерела</h2>
+    <ul>
+      <li>Сонячна енергія</li>
+      <li>Вітрова енергія</li>
+      <li>Водна енергія</li>
+      <li>Геотермальна енергія</li>
+      <li>Біоенергія</li>
+    </ul>
+  </section>
 
-    <!-- Слайд 6 -->
-    <section class="slide">
-      <h2>Переваги альтернативної енергетики</h2>
-      <ul>
-        <li>Не забруднює навколишнє середовище</li>
-        <li>Невичерпні джерела</li>
-        <li>Зменшує залежність від викопного палива</li>
-        <li>Безпечна для здоров'я людей</li>
-      </ul>
-    </section>
+  <section class="slide">
+    <h2>Сонячна енергія</h2>
+    <img src="img/solar-panel-reviews.jpg" alt="Сонячна енергетика">
+    <p>Сонячні панелі перетворюють світло Сонця на електроенергію. Це екологічно чистий та безшумний спосіб отримання енергії.</p>
+  </section>
 
-    <!-- Слайд 7 -->
-    <section class="slide">
-      <h2>Висновок</h2>
-      <p>
-        Альтернативна енергетика — це майбутнє людства.
-        Вона допомагає зберегти природу та забезпечити сталий розвиток.
-      </p>
-      <div class="footer">Дякую за увагу!</div>
-    </section>
-  </div>
+  <section class="slide">
+    <h2>Вітрова енергія</h2>
+    <img src="img/Sunset_at_Royd_Moor_Wind_Farm.jpg" alt="Вітрова енергетика">
+    <p>Вітрові електростанції використовують силу вітру для обертання турбін та виробництва електроенергії. Тема вивчається у курсі фізики.</p>
+  </section>
 
-  <div class="controls">
-    <button onclick="prevSlide()">◀ Назад</button>
-    <button onclick="nextSlide()">Далі ▶</button>
-  </div>
+  <section class="slide">
+    <h2>Переваги альтернативної енергетики</h2>
+    <ul>
+      <li>Не забруднює навколишнє середовище</li>
+      <li>Невичерпні джерела</li>
+      <li>Зменшує залежність від викопного палива</li>
+      <li>Безпечна для здоров'я людей</li>
+    </ul>
+  </section>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.getElementById('slides');
-    const totalSlides = slides.children.length;
+  <section class="slide">
+    <h2>Висновок</h2>
+    <p>Альтернативна енергетика — це майбутнє людства. Вона допомагає зберегти природу та забезпечити сталий розвиток.</p>
+    <div class="footer">Дякую за увагу!</div>
+  </section>
 
-    function updateSlide() {
-      slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
-    }
+</div>
 
-    function nextSlide() {
-      if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-        updateSlide();
-      }
-    }
+<div class="controls">
+  <button onclick="prevSlide()">◀ Назад</button>
+  <button onclick="nextSlide()">Далі ▶</button>
+</div>
 
-    function prevSlide() {
-      if (currentSlide > 0) {
-        currentSlide--;
-        updateSlide();
-      }
-    }
+<script>
+  let current = 0;
+  const slides = document.getElementById('slides');
+  const total = slides.children.length;
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft') prevSlide();
-    });
-  </script>
+  function update() {
+    slides.style.transform = `translateX(-${current * 100}vw)`;
+  }
+  function nextSlide() {
+    if (current < total - 1) { current++; update(); }
+  }
+  function prevSlide() {
+    if (current > 0) { current--; update(); }
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+</script>
+
 </body>
 </html>
-
-
