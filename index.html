@@ -2,96 +2,183 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
+  <title>Альтернативна енергетика — Марк Ільчук 8-В</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Геологічна історія Вінницької області</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      transition: transform 0.6s ease;
+    }
+    .slide {
+      min-width: 100vw;
+      height: 100vh;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+    p, li {
+      font-size: 22px;
+      max-width: 900px;
+      line-height: 1.5;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "⚡ ";
+    }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      background: #00c6ff;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.85;
+    }
+  </style>
 </head>
 <body>
-  <div class="presentation">
+  <div class="slides" id="slides">
     <!-- Слайд 1 -->
-    <section class="slide active" id="slide1" data-bg="img/Background1.jpg">
-      <div class="content">
-        <h1>Геологічна історія Вінницької області</h1>
-        <p class="subtitle">Навчальний проєкт-дослідження</p>
-        <button class="next">Почати</button>
-      </div>
+    <section class="slide">
+      <h1>Альтернативна енергетика</h1>
+      <p>Шкільна презентація з природознавства</p>
+      <div class="footer">Підготував: Марк Ільчук, 8-В клас</div>
     </section>
 
     <!-- Слайд 2 -->
-    <section class="slide" id="slide2" data-bg="img/Background2.jpg">
-      <div class="content">
-        <h2>1. Геологічна будова</h2>
-        <p>
-          Територія Вінницької області розташована в межах Українського щита — однієї з найстабільніших ділянок земної кори Східноєвропейської платформи.
-          У її основі лежать докембрійські породи — граніти, гнейси, кристалічні сланці, які місцями виходять на поверхню.
-        </p>
-        <p>
-          Осадовий чохол складається з пісків, глин, мергелів і вапняків палеозойського та мезозойського віку.
-        </p>
-        <button class="prev">Назад</button>
-        <button class="next">Далі</button>
-      </div>
+    <section class="slide">
+      <h2>Що таке альтернативна енергетика?</h2>
+      <p>
+        Альтернативна енергетика — це отримання енергії з відновлюваних джерел,
+        які не вичерпуються та майже не шкодять довкіллю.
+      </p>
     </section>
 
     <!-- Слайд 3 -->
-    <section class="slide" id="slide3" data-bg="img/Background3.jpg">
-      <div class="content">
-        <h2>2. Геоморфологічна будова</h2>
-        <p>
-          Поверхня Вінниччини — це частина Подільської височини, яка має горбисто-хвилястий рельєф.
-          Глибокі долини Південного Бугу та Дністра утворюють мальовничі каньйони з крутими схилами.
-        </p>
-        <p>
-          На півдні поширені карстові форми рельєфу, що виникли у вапняках девонського віку.
-        </p>
-        <button class="prev">Назад</button>
-        <button class="next">Далі</button>
-      </div>
+    <section class="slide">
+      <h2>Основні джерела</h2>
+      <ul>
+        <li>Сонячна енергія</li>
+        <li>Вітрова енергія</li>
+        <li>Водна енергія</li>
+        <li>Геотермальна енергія</li>
+        <li>Біоенергія</li>
+      </ul>
     </section>
 
     <!-- Слайд 4 -->
-    <section class="slide" id="slide4" data-bg="img/Background4.jpg">
-      <div class="content">
-        <h2>3. Корисні копалини та пам’ятки</h2>
-        <ul>
-          <li><b>Граніти та гнейси</b> — Жежелівка, Іванів, Глухівці (будівельний камінь).</li>
-          <li><b>Каоліни</b> — Козятинський і Липовецький райони (сировина для кераміки).</li>
-          <li><b>Піски, глини, вапняки</b> — поширені по всій території, використовуються у будівництві.</li>
-          <li><b>Пам’ятки</b>: Сабарівські відслонення, Глуховецький кар’єр, береги Південного Бугу.</li>
-        </ul>
-        <button class="prev">Назад</button>
-        <button class="next">Далі</button>
-      </div>
+    <section class="slide">
+      <h2>Сонячна енергія</h2>
+      <p>
+        Сонячні панелі перетворюють світло Сонця на електроенергію.
+        Це екологічно чистий та безшумний спосіб отримання енергії.
+      </p>
     </section>
 
     <!-- Слайд 5 -->
-    <section class="slide" id="slide5" data-bg="img/Background5.jpg">
-      <div class="content">
-        <h2>4. Геологічна історія</h2>
-        <p>
-          Архей (близько 4–2,5 млрд років тому) — формування Українського щита, утворення гранітів і гнейсів.
-        </p>
-        <p>
-          Палеозой — опускання території, періодичні морські трансгресії, накопичення вапняків і глин.
-        </p>
-        <p>
-          Мезозой і кайнозой — підняття території, утворення сучасного рельєфу, поява річкових долин і карсту.
-        </p>
-        <button class="prev">Назад</button>
-        <button class="next">Завершити</button>
-      </div>
+    <section class="slide">
+      <h2>Вітрова енергія</h2>
+      <p>
+        Вітрові електростанції використовують силу вітру для обертання турбін
+        та виробництва електроенергії.
+      </p>
     </section>
 
     <!-- Слайд 6 -->
-    <section class="slide" id="slide6" data-bg="img/Background6.jpg">
-      <div class="content">
-        <h2>Дякую за увагу!</h2>
-        <p>© 2025 Учнівський проєкт. Автор: Ільчук Марк</p>
-        <button class="prev">Назад</button>
-      </div>
+    <section class="slide">
+      <h2>Переваги альтернативної енергетики</h2>
+      <ul>
+        <li>Не забруднює навколишнє середовище</li>
+        <li>Невичерпні джерела</li>
+        <li>Зменшує залежність від викопного палива</li>
+        <li>Безпечна для здоров'я людей</li>
+      </ul>
+    </section>
+
+    <!-- Слайд 7 -->
+    <section class="slide">
+      <h2>Висновок</h2>
+      <p>
+        Альтернативна енергетика — це майбутнє людства.
+        Вона допомагає зберегти природу та забезпечити сталий розвиток.
+      </p>
+      <div class="footer">Дякую за увагу!</div>
     </section>
   </div>
+
+  <div class="controls">
+    <button onclick="prevSlide()">◀ Назад</button>
+    <button onclick="nextSlide()">Далі ▶</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
 </body>
 </html>
-
